@@ -1,0 +1,11 @@
+create table bearboats (id integer, item text, price text);
+
+
+insert into bearboats values (1, "hoodies", "$30");
+insert into bearboats values (2, "pants",
+"$40");
+insert into bearboats values (3, "socks", "$9");
+insert into bearboats values (4, "beanies","$10");
+insert into bearboats values (5, "oversized tee","$18");
+select * from bearboats
+ 
