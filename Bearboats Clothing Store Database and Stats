@@ -1,11 +1,27 @@
-create table bearboats (id integer, item text, price text);
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
 
+INSERT INTO store VALUES (1, "hoodies", "Tops", 9.99, 50);
+INSERT INTO store VALUES (2, "pants", "Bottoms", 19.99, 95);
+INSERT INTO store VALUES (3, "socks", "Accessories", 2.99, 55);
+INSERT INTO store VALUES (4, "beanies", "Accessories", 9.99, 50);
+INSERT INTO store VALUES (5, "oversized tees", "Tops", 12.99, 65);
+INSERT INTO store VALUES (6, "bracelets", "Accessories", 3.99, 43);
+INSERT INTO store VALUES (7, "shorts", "Bottoms", 12.99, 35);
+INSERT INTO store VALUES (8, "gloves", "Accessories", 6.99, 50);
+INSERT INTO store VALUES (9, "backpacks", "Equipment", 34.99, 75);
+INSERT INTO store VALUES (10, "water bottles", "Equipment", 8.99, 25);
+INSERT INTO store VALUES (11, "shoes", "Equipment", 54.99, 33);
+INSERT INTO store VALUES (12, "caps", "Accessories", 11.99, 80);
+INSERT INTO store VALUES (13, "shirts", "Tops", 8.99,29);
+INSERT INTO store VALUES (14, "tank tops", "Tops", 5.99, 26);
+INSERT INTO store VALUES (15, "belts", "Accessories", 29.99, 47);
 
-insert into bearboats values (1, "hoodies", "$30");
-insert into bearboats values (2, "pants",
-"$40");
-insert into bearboats values (3, "socks", "$9");
-insert into bearboats values (4, "beanies","$10");
-insert into bearboats values (5, "oversized tee","$18");
-select * from bearboats
- 
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what are the most 5 popular items? 
+SELECT item, price, popularity
+FROM store
+order by popularity desc
+limit 5; 
