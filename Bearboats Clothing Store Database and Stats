@@ -18,7 +18,7 @@ INSERT INTO store VALUES (15, "belts", "Accessories", 29.99, 47);
 
 --display the database ordered by price. 
 SELECT * FROM store
-ORDER BY price desc; 
+ORDER BY id asc; 
 
 --what are the most 5 popular items? 
 SELECT item, price, popularity
